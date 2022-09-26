@@ -1,0 +1,199 @@
+:root {
+  --very-light-grayish-blue: hsl(240, 78%, 98%);
+  --light-grayish-blue: hsl(234, 14%, 74%);
+  --grayish-blue: hsl(233, 13%, 49%);
+  --drak-grayish-blue: hsl(232, 13%, 33%);
+  --light-gradient: hsl(236, 72%, 79%);
+  --dark-gradient: hsl(237, 63%, 64%);
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--very-light-grayish-blue);
+  background-image: url(/images/bg-bottom.svg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom left;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url(/images/bg-top.svg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top right;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--grayish-blue);
+}
+
+.price-switch {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+input.apple-switch {
+  margin: 0 2rem 0 2rem;
+  position: relative;
+  -webkit-appearance: none;
+  outline: none;
+  width: 50px;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid var(--dark-gradient);
+  border-radius: 50px;
+  box-shadow: inset -20px 0 0 0 var(--dark-gradient);
+}
+
+input.apple-switch:after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  background: transparent;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+input.apple-switch:checked {
+  box-shadow: inset 20px 0 0 0 var(--dark-gradient);
+  border-color: var(--dark-gradient);
+}
+
+input.apple-switch:checked:after {
+  left: 20px;
+  box-shadow: -2px 4px 3px rgba(0, 0, 0, 0.05);
+}
+
+.price-switch span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--light-grayish-blue);
+}
+
+.prices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.prices section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 20rem;
+  padding: 2rem 4rem 2rem 4rem;
+  border: 1px solid var(--very-light-grayish-blue);
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.prices section.middle-sec {
+  height: 34rem;
+  color: var(--very-light-grayish-blue);
+  background-image: linear-gradient(
+    to bottom,
+    var(--light-gradient),
+    var(--dark-gradient)
+  );
+}
+
+.prices section.sides-sec {
+  height: 30rem;
+  background-color: white;
+  color: var(--grayish-blue);
+}
+
+.prices section strong {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+.prices section span,
+.prices section p {
+  margin: 0;
+  padding: 1.5rem;
+  font-weight: 700;
+}
+
+.prices section span {
+  font-size: 1.4rem;
+}
+
+.prices section.sides-sec p {
+  border-top: 1px solid;
+}
+
+.prices section.middle-sec p {
+  border-top: 1px solid;
+}
+
+.prices section p.last {
+  border-bottom: 1px solid;
+}
+
+section button {
+  margin-top: 3rem;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  padding: 1rem 0 1rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+section .monthly {
+  display: none;
+}
+
+section .middle-btn {
+  background-color: white;
+  color: var(--dark-gradient);
+}
+
+section .middle-btn span {
+  background: linear-gradient(
+    to right,
+    var(--light-gradient),
+    var(--dark-gradient)
+  );
+}
+
+section .sides-btn {
+  background-image: linear-gradient(
+    to right,
+    var(--light-gradient),
+    var(--dark-gradient)
+  );
+  color: white;
+}
+
+.attribution {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--drak-grayish-blue);
+}

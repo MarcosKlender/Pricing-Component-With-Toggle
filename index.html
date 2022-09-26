@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Pricing Component with Toggle</title>
+
+</head>
+
+<body>
+  <header>
+    <h1>Our Pricing</h1>
+    <div class="price-switch">
+      <span>Annually</span>
+      <input class="apple-switch" type="checkbox" id="pricing" onclick="priceChange()">
+      <span>Monthly</span>
+    </div>
+  </header>
+
+  <div class="prices">
+    <section class="sides-sec">
+      <span>Basic</span>
+      <strong class="monthly">&dollar;19.99</strong>
+      <strong class="annually">&dollar;199.99</strong>
+      <p>500 GB Storage</p>
+      <p>2 Users Allowed</p>
+      <p class="last">Send up to 3 GB</p>
+      <button class="sides-btn">LEARN MORE</button>
+    </section>
+
+    <section class="middle-sec">
+      <span>Professional</span>
+      <strong class="monthly">&dollar;24.99</strong>
+      <strong class="annually">&dollar;249.99</strong>
+      <p>1 TB Storage</p>
+      <p>5 Users Allowed</p>
+      <p class="last">Send up to 10 GB</p>
+      <button class="middle-btn">LEARN MORE</button>
+    </section>
+
+    <section class="sides-sec">
+      <span>Master</span>
+      <strong class="monthly">&dollar;39.99</strong>
+      <strong class="annually">&dollar;399.99</strong>
+      <p>2 TB Storage</p>
+      <p>10 Users Allowed</p>
+      <p class="last">Send up to 20 GB</p>
+      <button class="sides-btn">LEARN MORE</button>
+    </section>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.marcosklender.com" target="_blank">MarcosKlender</a>.
+  </div>
+
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
