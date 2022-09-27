@@ -10,7 +10,7 @@
 html {
   font-family: "Montserrat", sans-serif;
   background-color: var(--very-light-grayish-blue);
-  background-image: url(/images/bg-bottom.svg);
+  background-image: url(images/bg-bottom.svg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: bottom left;
@@ -20,7 +20,8 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-image: url(/images/bg-top.svg);
+  width: 100vw;
+  background-image: url(images/bg-top.svg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: top right;
@@ -58,6 +59,7 @@ input.apple-switch {
   border: 1px solid var(--dark-gradient);
   border-radius: 50px;
   box-shadow: inset -20px 0 0 0 var(--dark-gradient);
+  cursor: pointer;
 }
 
 input.apple-switch:after {
@@ -158,6 +160,7 @@ section button {
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.2rem;
+  cursor: pointer;
 }
 
 section .monthly {
@@ -167,6 +170,11 @@ section .monthly {
 section .middle-btn {
   background-color: white;
   color: var(--dark-gradient);
+}
+
+section .middle-btn:hover {
+  background-color: transparent;
+  color: var(--very-light-grayish-blue);
 }
 
 section .middle-btn span {
@@ -186,6 +194,13 @@ section .sides-btn {
   color: white;
 }
 
+section .sides-btn:hover {
+  background-image: none;
+  background-color: transparent;
+  color: var(--dark-gradient);
+  border-color: var(--dark-gradient);
+}
+
 .attribution {
   font-size: 0.8rem;
   text-align: center;
@@ -196,4 +211,21 @@ section .sides-btn {
   text-decoration: none;
   font-weight: bold;
   color: var(--drak-grayish-blue);
+}
+
+@media (max-width: 425px) {
+  .prices {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .prices section {
+    margin: 2rem 1rem 2rem 1rem;
+    padding: 2rem 1rem 2rem 1rem;
+  }
+
+  .attribution {
+    font-size: 0.7rem;
+    padding-bottom: 2rem;
+  }
 }
